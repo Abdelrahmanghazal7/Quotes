@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    transition: 0.5s;
+    transition-timing-function: ease-in;
+    background-image: linear-gradient(to right bottom, rgb(158, 128, 255), #000000a8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin: 10px;
+}
+
+.container:hover {
+    box-shadow: 0 10px 10px rgb(61, 0, 230);
+}
+
+h1 {
+    font-family: fantasy;
+    font-size: 40px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+.fa-quote-left,
+.fa-quote-right {
+    font-size: 30px;
+    color: rgb(78, 0, 179);
+}
+
+.quote {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.author {
+    margin: 10px;
+    color: rgba(46, 46, 46, 0.874);
+    text-align: left;
+    font-size: 25px;
+    font-style: italic;
+    font-family: cursive;
+}
+
+hr {
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid black;
+    background-color: black;
+}
+
+.next {
+    display: flex;
+    justify-content: end;
+}
+
+.bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.bg span {
+    font-family: 'FontAwesome';
+    position: absolute;
+    font-size: 14px;
+    font-weight: bolder;
+    color: rgb(220, 220, 220);
+    transition: all 265ms ease-out;
+}
+
+.bg:before {
+    display: block;
+    transform: scale(1);
+    content: " ";
+    width: 120px;
+    height: 60px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right bottom, rgb(134, 0, 230), #000000);
+    transition: all 265ms ease-out;
+}
+
+.bg:hover:before {
+    transform: scale(0);
+    transition: all 265ms ease-in;
+}
+
+.bg:hover span {
+    transform: scale(1.7);
+    color: black;
+    transition: all 265ms ease-in;
+    text-shadow: 1px 1px 2px rgb(119, 0, 255), 0 0 1em blue, 0 0 0.2em blue;
+    filter: drop-shadow(0 0 0.75rem blueviolet);
+    margin-right: 20px;
+    margin-top: 20px;
+}
