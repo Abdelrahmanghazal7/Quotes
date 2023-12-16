@@ -29,12 +29,23 @@ var quotes = [
     },
 ];
 
+var arr = [];
 
 function generateQuote() {
 
     var random = Math.floor(Math.random() * quotes.length);
 
+    while (arr.includes(random)) {
+        random = Math.floor(Math.random() * quotes.length);
+    }
+
+    arr.push(random);
+
+    if (arr.length == quotes.length) {
+        arr.splice(0, 1)
+    }
+
+    console.log(random)
     document.getElementById('quote').innerHTML = quotes[random].quote;
     document.getElementById('author').innerHTML = `--${quotes[random].author}`;
-
 }
